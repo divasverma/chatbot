@@ -7,11 +7,6 @@ from query_vector_store import query_vector_index
 # Set your OpenAI API key
 if "OPENAI_API_KEY" in st.secrets:
     my_api_key = st.secrets["OPENAI_API_KEY"]
-else:
-    my_api_key = st.sidebar.text_input(
-        label = "#### Set your OpenAI API key here 👇",
-        placeholder = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-        type = "password")
 
 # Set your data directory path
 if "DATA_DIRECTORY_PATH" in st.secrets:
