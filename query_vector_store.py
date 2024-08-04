@@ -4,7 +4,7 @@ from llama_index.core import (
     load_index_from_storage,
     StorageContext,
 )
-os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+# os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 from llama_index.vector_stores.faiss import FaissVectorStore
 
 def query_vector_index(prompt):
