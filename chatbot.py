@@ -5,17 +5,19 @@ from llama_index.core import Settings, VectorStoreIndex, SimpleDirectoryReader
 from query_vector_store import query_vector_index
 
 # Set your OpenAI API key
-if "OPENAI_API_KEY" in st.secrets:
-    my_api_key = st.secrets["OPENAI_API_KEY"]
+my_api_key = os.environ.get('OPENAI_API_KEY')
+# if "OPENAI_API_KEY" in st.secrets:
+#     my_api_key = st.secrets["OPENAI_API_KEY"]
 
 # Set your data directory path
-if "DATA_DIRECTORY_PATH" in st.secrets:
-    my_directory_path = st.secrets["DATA_DIRECTORY_PATH"]
-else:
-    my_directory_path = st.sidebar.text_input(
-        label = "#### Set your data directory path here 👇",
-        placeholder = "C:\\path\\to\\your\\data\\directory",
-        type = "default")
+my_directory_path = os.environ.get("DATA_DIRECTORY_PATH")
+# if "DATA_DIRECTORY_PATH" in st.secrets:
+#     my_directory_path = st.secrets["DATA_DIRECTORY_PATH"]
+# else:
+#     my_directory_path = st.sidebar.text_input(
+#         label = "#### Set your data directory path here 👇",
+#         placeholder = "C:\\path\\to\\your\\data\\directory",
+#         type = "default")
 
 
 # Sidebar for user details
