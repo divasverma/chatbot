@@ -13,7 +13,6 @@ from llama_index.vector_stores.faiss import FaissVectorStore
 d = 1536
 faiss_index = faiss.IndexFlatL2(d)
 my_directory_path = "/Users/divasverma/Desktop/ai-playground/llamaindex-tutorials/2-GUI_travel_recommendation_RAG/documents"
-os.environ["OPENAI_API_KEY"] = "sk-None-vswA6kIBQohsQcsRC3NVT3BlbkFJ2sqPSdAyLw42KLzWomCn"
 
 documents = SimpleDirectoryReader(my_directory_path).load_data()
 
